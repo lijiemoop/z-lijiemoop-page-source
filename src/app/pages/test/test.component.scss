@@ -1,0 +1,34 @@
+.logo-bg{
+  $logo-width: 200px;
+  width: $logo-width * 0.2;
+  height: $logo-width * 0.2;
+  margin: $logo-width * 0.4 $logo-width * 0.4;
+  position: relative;
+  border-radius: 50%;
+  background-color: blue;
+  z-index: 200;
+  &:before{
+    content: '';
+    position: absolute;
+    z-index: 190;
+    left: - ($logo-width * 0.4);
+    top: - ($logo-width * 0.4);
+    width: $logo-width * 0.9;
+    height: $logo-width * 0.9;
+    border-radius: 50%;
+    border: $logo-width * 0.05 solid #000;
+    transform: rotate3d(0,4,2,140deg)
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    z-index: 190;
+    left: - ($logo-width * 0.4);
+    top: - ($logo-width * 0.4);
+    width: $logo-width * 0.9;
+    height: $logo-width * 0.9;
+    border-radius: 50%;
+    border: $logo-width * 0.05 solid #000;
+    transform: rotate3d(0,4,2,-150deg)
+  }
+}
